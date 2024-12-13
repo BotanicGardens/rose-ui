@@ -1,0 +1,39 @@
+{
+    "name": "@roseui/monorepo",
+    "private": true,
+    "type": "module",
+    "author": "Norush",
+    "license": "MIT",
+    "engines": {
+        "node": "^18.12.0 || ^20.17.0"
+    },
+    "homepage": "https://github.com/RoseAplmus/rose-ui.git",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RoseAplmus/rose-ui.git"
+    },
+    "keywords": [
+        "ui",
+        "components",
+        "react-components"
+    ],
+    "scripts": {
+        "prepare": "husky",
+        "dev": "vite",
+        "build": "vite build",
+        "preview": "vite preview"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.6.0",
+        "@commitlint/config-conventional": "^19.6.0",
+        "@eslint/js": "^9.16.0",
+        "eslint": "^9.16.0",
+        "husky": "^9.1.7",
+        "lint-staged": "^15.2.11",
+        "prettier": "3.4.2",
+        "typescript": "^5.7.2",
+        "typescript-eslint": "^8.18.0",
+        "vite": "^6.0.3"
+    },
+    "packageManager": "pnpm@9.15.0"
+}

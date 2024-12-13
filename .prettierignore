@@ -1,0 +1,22 @@
+# general
+.DS_Store
+.editorconfig
+.idea
+.vscode
+.history
+.env.local
+.husky
+.npmrc
+
+# dependencies
+dist
+node_modules
+*.log
+*.lock
+venv
+dist/
+temp/
+LICENSE
+LICENSE.md
+pnpm-lock.yaml
+pnpm-workspace.yaml
