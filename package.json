@@ -35,5 +35,14 @@
         "typescript-eslint": "^8.18.0",
         "vite": "^6.0.3"
     },
+    "lint-staged": {
+        "*.{js,json}": [
+            "prettier --write"
+        ],
+        "*.ts?(x)": [
+            "eslint --fix",
+            "prettier --parser=typescript --write"
+        ]
+    },
     "packageManager": "pnpm@9.15.0"
 }
