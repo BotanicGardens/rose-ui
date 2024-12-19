@@ -1,0 +1,37 @@
+{
+    "name": "create-rose",
+    "version": "0.0.0",
+    "description": "Add ui components to your project.",
+    "author": "Norush",
+    "license": "MIT",
+    "type": "module",
+    "files": [
+        "dist",
+        "index.js"
+    ],
+    "bin": {
+        "create-rose": "index.js",
+        "rose": "index.js"
+    },
+    "scripts": {
+        "buidl": "",
+        "test": ""
+    },
+    "keywords": [
+        "ui",
+        "rose",
+        "create-rose",
+        "components",
+        "components-cli",
+        "react-components"
+    ],
+    "bugs": {
+        "url": "https://github.com/RoseAplmus/rose-ui/issues"
+    },
+    "homepage": "https://github.com/RoseAplmus/rose-ui/packages/create-rose#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/RoseAplmus/rose-ui.git",
+        "directory": "packages/create-rose"
+    }
+}
