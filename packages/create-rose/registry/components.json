@@ -1,0 +1,13 @@
+[
+    {
+        "name": "component-name",
+        "files": [
+            {
+                "name": "component.tsx",
+                "dir": "components/ui",
+                "content": ""
+            }
+        ],
+        "type": "ui"
+    }
+]
