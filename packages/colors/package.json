@@ -1,0 +1,35 @@
+{
+    "name": "@rose-ui/colors",
+    "version": "0.0.0",
+    "description": "A professional color system for Rose UI",
+    "author": "Norush",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "color",
+        "design-system",
+        "rose-ui"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "tsup src/index.ts --format cjs,esm --dts",
+        "test": "vitest",
+        "lint": "eslint src --ext .ts",
+        "prepublishOnly": "pnpm build"
+    },
+    "devDependencies": {
+        "@types/color-convert": "^2.0.4",
+        "tsup": "8.3.5",
+        "vitest": "^2.1.8"
+    },
+    "dependencies": {
+        "color-convert": "^2.0.1"
+    }
+}
