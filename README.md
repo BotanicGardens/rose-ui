@@ -2,6 +2,8 @@
 
 An interesting library of React UI components
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/c2e1ee49-e116-4a98-9ec7-0bbd05c4bd40/deploy-status)](https://app.netlify.com/sites/roseui/deploys)
+
 #### 📝 License
 
 Copyright © 2024 [Norush][profile-link]. <br />
