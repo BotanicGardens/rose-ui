@@ -21,6 +21,10 @@ jobs:
             - name: Install pnpm
               run: npm install -g pnpm
 
+            # Run pnpm setup to configure the global bin directory
+            - name: Setup pnpm
+              run: pnpm setup
+
             - name: Install dependencies
               run: pnpm install
 
