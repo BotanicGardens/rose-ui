@@ -21,13 +21,11 @@ jobs:
             - name: Install pnpm
               run: npm install -g pnpm
 
-            # Set up PNPM_HOME and add it to PATH
-            - name: Set PNPM_HOME
+            - name: Set PNPM_HOME and add it to PATH
               run: |
-                  export PNPM_HOME=$HOME/.pnpm
-                  export PATH=$PNPM_HOME/bin:$PATH
-                  echo "PNPM_HOME=$PNPM_HOME" >> $GITHUB_ENV
-                  echo "PATH=$PNPM_HOME/bin:$PATH" >> $GITHUB_ENV
+                  mkdir -p $HOME/.pnpm
+                  echo "PNPM_HOME=$HOME/.pnpm" >> $GITHUB_ENV
+                  echo "PATH=$HOME/.pnpm/bin:$PATH" >> $GITHUB_ENV
 
             - name: Install dependencies
               run: pnpm install
@@ -38,10 +36,15 @@ jobs:
                   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
               run: pnpm run build:website
 
+            - name: Install netlify-cli
+              run: pnpm add -g netlify-cli
+
+            - name: Check netlify-cli installation
+              run: netlify --version
+
             - name: Deploy to Netlify
               env:
                   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
               run: |
-                  pnpm install -g netlify-cli
                   netlify deploy --dir=website/dist --prod --auth=$NETLIFY_AUTH_TOKEN --site=$NETLIFY_SITE_ID
