@@ -1,4 +1,5 @@
-packages:
-    - 'website/*'
+packages: 
+    # Separate single-pack files need to use the format "pkg/**" or "pkg"
+    - 'website/**' 
     - 'packages/*'
-    - 'playground/*'
+    - 'playground/**'
