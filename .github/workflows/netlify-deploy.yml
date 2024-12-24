@@ -21,11 +21,13 @@ jobs:
             - name: Install pnpm
               run: npm install -g pnpm
 
-            # Run pnpm setup to configure the global bin directory
-            - name: Setup pnpm
-              env:
-                  SHELL: /bin/bash
-              run: pnpm setup
+            # Set up PNPM_HOME and add it to PATH
+            - name: Set PNPM_HOME
+              run: |
+                  export PNPM_HOME=$HOME/.pnpm
+                  export PATH=$PNPM_HOME/bin:$PATH
+                  echo "PNPM_HOME=$PNPM_HOME" >> $GITHUB_ENV
+                  echo "PATH=$PNPM_HOME/bin:$PATH" >> $GITHUB_ENV
 
             - name: Install dependencies
               run: pnpm install
