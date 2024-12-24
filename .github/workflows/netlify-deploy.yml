@@ -23,6 +23,8 @@ jobs:
 
             # Run pnpm setup to configure the global bin directory
             - name: Setup pnpm
+              env:
+                  SHELL: /bin/bash
               run: pnpm setup
 
             - name: Install dependencies
