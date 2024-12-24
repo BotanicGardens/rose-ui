@@ -1,6 +1,7 @@
 [build]
+  base = "website"  # 指定部署项目的根目录
+  publish = "website/dist"  # 指定构建后的目录
   command = "pnpm run build:website"
-  publish = "website/dist"
 
 [build.environment]
   NODE_VERSION = "20"
