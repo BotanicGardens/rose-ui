@@ -19,13 +19,7 @@ jobs:
                   node-version: '20'
 
             - name: Install pnpm
-              run: npm install -g pnpm
-
-            - name: Set PNPM_HOME and add it to PATH
-              run: |
-                  mkdir -p $HOME/.pnpm
-                  echo "PNPM_HOME=$HOME/.pnpm" >> $GITHUB_ENV
-                  echo "PATH=$HOME/.pnpm/bin:$PATH" >> $GITHUB_ENV
+              uses: pnpm/action-setup@v4.0.0
 
             - name: Install dependencies
               run: pnpm install
