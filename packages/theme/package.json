@@ -1,0 +1,26 @@
+{
+    "name": "@rose-ui/theme",
+    "version": "0.0.0",
+    "description": "Theme package for Rose UI",
+    "main": "dist/index.js",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "dev": "tsup src/index.ts --format esm,cjs --dts --watch",
+        "build": "tsup src/index.ts --format esm,cjs --dts",
+        "test": "vitest"
+    },
+    "dependencies": {
+        "@emotion/react": "^11.14.0",
+        "@emotion/styled": "^11.14.0",
+        "@rose-ui/colors": "workspace:^",
+        "clsx": "^2.1.0"
+    },
+    "devDependencies": {
+        "@types/react": "^19.0.2",
+        "tsup": "8.3.5"
+    }
+}
