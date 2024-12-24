@@ -1,10 +1,12 @@
+[build]
+  command = "pnpm run build:website"
+  publish = "website/dist"
+
 [build.environment]
   NODE_VERSION = "20"
   NODE_ENV = "production"
   REACT_APP_API_URL = "https://roseui.netlify.app"
 
-[build]
-  publish = "website/dist" # 指定部署的路径
-  command = "pnpm run build"
-
-
+[context.production.environment]
+  NETLIFY_AUTH_TOKEN = "${{ secrets.NETLIFY_AUTH_TOKEN }}"
+  NETLIFY_SITE_ID = "${{ secrets.NETLIFY_SITE_ID }}"

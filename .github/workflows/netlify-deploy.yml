@@ -26,6 +26,8 @@ jobs:
 
             - name: Build project
               env:
+                  NODE_ENV: production
+                  REACT_APP_API_URL: https://roseui.netlify.app
                   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
               run: pnpm run build:website
@@ -40,5 +42,4 @@ jobs:
               env:
                   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
                   NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-              run: |
-                  netlify deploy --dir=website/dist --prod --auth=$NETLIFY_AUTH_TOKEN --site=$NETLIFY_SITE_ID
+              run: netlify deploy --dir=website/dist --prod --auth=$NETLIFY_AUTH_TOKEN --site=$NETLIFY_SITE_ID
