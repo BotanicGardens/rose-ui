@@ -4,3 +4,8 @@
 
 [[plugins]]
   package = "@opennextjs/netlify"
+  
+[edge-functions]
+
+[functions."test-scheduled-function"]
+  schedule = "@hourly"
