@@ -1,3 +1,6 @@
 [build]
   publish = "website/.next"  # 指定构建后的目录
   command = "pnpm run build:website"
+
+[[plugins]]
+  package = "@opennextjs/netlify"
