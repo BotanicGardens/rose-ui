@@ -1,16 +1,6 @@
 [build]
-  base = "/"  # 指定部署项目的根目录
-  publish = "/website/dist"  # 指定构建后的目录
+  publish = "website/.next"  # 指定构建后的目录
   command = "pnpm run build:website"
-
-[build.environment]
-  NODE_VERSION = "20"
-  NODE_ENV = "production"
-  REACT_APP_API_URL = "https://roseui.netlify.app"
-
-[context.production.environment]
-  NETLIFY_AUTH_TOKEN = "${{ secrets.NETLIFY_AUTH_TOKEN }}"
-  NETLIFY_SITE_ID = "${{ secrets.NETLIFY_SITE_ID }}"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
