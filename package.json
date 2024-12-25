@@ -21,7 +21,6 @@
         "prepare": "husky",
         "dev": "vite",
         "dev:website": "pnpm --filter=website dev",
-        "build": "vite build",
         "build:website": "pnpm --filter=website build",
         "lint": "pnpm run lint:es && pnpm run lint:pt",
         "lint:es": "eslint  --fix",
