@@ -123,6 +123,9 @@ importers:
       '@netlify/plugin-nextjs':
         specifier: ^5.9.2
         version: 5.9.2
+      '@rose-ui/theme':
+        specifier: workspace:^
+        version: link:../packages/theme
       next:
         specifier: 15.1.2
         version: 15.1.2(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
