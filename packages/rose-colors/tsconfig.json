@@ -1,6 +1,8 @@
 {
-    "extends": "../rose-tsconfig/react.json",
+    "extends": "../rose-tsconfig/base.json",
     "compilerOptions": {
+        "resolveJsonModule": true,
+
         "outDir": "./dist",
         "baseUrl": ".",
         "paths": {
@@ -8,5 +10,5 @@
         }
     },
     "include": ["./src"],
-    "exclude": ["node_modules", "dist", "tests"]
+    "exclude": ["node_modules", "dist", "tests", "/index.js", "/index.mjs"]
 }
