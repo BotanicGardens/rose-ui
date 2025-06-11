@@ -18,6 +18,7 @@
         "react-components"
     ],
     "scripts": {
+        "release": "changeset publish",
         "prepare": "husky",
         "dev": "vite",
         "dev:website": "pnpm --filter=website dev",
