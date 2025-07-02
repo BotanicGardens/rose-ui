@@ -10,6 +10,7 @@ lerna-debug.log*
 # General files
 dist
 node_modules
+temp
 
 # config files
 .env
