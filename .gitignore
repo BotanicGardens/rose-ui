@@ -30,3 +30,9 @@ temp
 
 # Local Netlify folder
 .netlify
+
+# Storybook build output
+*storybook.log
+.storybook/storybook-static
+storybook-static
+build-storybook.log
