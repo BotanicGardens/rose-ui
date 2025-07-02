@@ -1,5 +1,4 @@
-packages: 
-    # Separate single-pack files need to use the format "pkg/**" or "pkg"
-    - 'website/**' 
+packages:
+    - 'apps/**'
     - 'packages/*'
-    - 'playground/**'
+    - 'stripts/**'
