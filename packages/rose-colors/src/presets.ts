@@ -1,4 +1,4 @@
-export const semanticColors: Record<string, string> = {
+export const statusColor: Record<string, string> = {
     primary: '#2563eb', // Blue
     success: '#16a34a', // Green
     warning: '#d97706', // Orange
@@ -7,7 +7,7 @@ export const semanticColors: Record<string, string> = {
     gray: '#6b7280', // Gray
 } as const
 
-export const baseColors: Record<string, string> = {
+export const colorTheme: Record<string, string> = {
     red: '#F5222D',
     volcano: '#FA541C',
     orange: '#FA8C16',

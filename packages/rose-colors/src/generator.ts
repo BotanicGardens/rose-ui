@@ -1,5 +1,4 @@
 import { hexToHSL, hslToHex, applyGamma } from './convert'
-import { baseColors, semanticColors } from './presets'
 import type { HSL } from './types'
 
 const distSatu = 1.618,
@@ -67,32 +66,3 @@ export const ColorGenerator = {
         return this.generate(baseColor, true)
     },
 }
-
-// 生成标准色阶
-export const colors = Object.entries(baseColors).reduce(
-    (acc, [name, color]) => {
-        acc[name] = ColorGenerator.generate(color)
-        return acc
-    },
-    {} as Record<string, ReturnType<typeof ColorGenerator.generate>>
-)
-
-// 生成语义化色阶
-export const semantic = Object.entries(semanticColors).reduce(
-    (acc, [name, color]) => {
-        acc[name] = ColorGenerator.generate(color)
-        return acc
-    },
-    {} as Record<string, ReturnType<typeof ColorGenerator.generate>>
-)
-
-// 生成暗色主题色阶
-export const dark = Object.entries(baseColors).reduce(
-    (acc, [name, color]) => {
-        acc[name] = ColorGenerator.generateDark(color)
-        return acc
-    },
-    {} as Record<string, ReturnType<typeof ColorGenerator.generate>>
-)
-
-console.log(colors, dark)
