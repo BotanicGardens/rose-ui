@@ -5,7 +5,28 @@
  */
 
 /** Color-system */
-export { base } from './color'
+export {
+    default as colors,
+    gray,
+    blue,
+    green,
+    orange,
+    red,
+    celery,
+    chartreuse,
+    cyan,
+    fuchsia,
+    indigo,
+    magenta,
+    purple,
+    seafoam,
+    yellow,
+
+    // theming
+    lightColors,
+    darkColors,
+    darkestColors,
+} from './color'
 
 /** Mutual-system */
 export { cursor } from './cursor'
@@ -14,23 +35,10 @@ export { cursor } from './cursor'
 export { default as borders, borderWidths, borderRadius } from './borders'
 
 /** Motion-system */
-export {
-    default as motion,
-    animations,
-    durations,
-    keyframes,
-    curves,
-} from './motion'
+export { default as motion, animations, durations, keyframes, curves } from './motion'
 
 /** Typography-system */
-export {
-    default as typography,
-    fontFamilies,
-    fontSizes,
-    fontWeights,
-    lineHeights,
-    letterSpacings,
-} from './typography'
+export { default as typography, fontFamilies, fontSizes, fontWeights, lineHeights, letterSpacings } from './typography'
 
 /** Measure-system */
 export { sizes } from './size'
