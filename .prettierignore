@@ -7,6 +7,7 @@
 .env.local
 .husky
 .npmrc
+.prettierrc
 
 # dependencies
 dist
